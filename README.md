@@ -21,3 +21,17 @@ Pagamento:
   - valor
   - data de vencimento
   - data de pagamento
+
+## Etapa 2
+
+- Uma conta precisa ter um Email Válido
+- Uma conta poupança deve poder prever o rendimento anual com base no saldo.
+- Cada conta poupança pode ter um juros anual específico.
+- Transferências devem poder ser realizadas de uma conta pra outra.
+- Uma fila de Pagamentos e Transferências deve poder ser efetivada de uma vez.
+
+## Especificações 
+
+- Utilizar composição para dividir responsabilidades, desacoplar o código e tornar possível a reutilização
+- Utilizar herança para especializar classes, reutilizando comportamentos em comum
+- Utilizar interfaces para definir uma estrutura sem um comportamento especifífico
