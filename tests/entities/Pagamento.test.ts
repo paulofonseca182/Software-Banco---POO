@@ -22,7 +22,7 @@ describe('Pagamento', () => {
     expect(pagamento).to.be.instanceOf(Pagamento);
   });
 
-  it('Deve alterar o salfo das constas ao realizar um pagamento', () => {
+  it('Deve alterar o saldo das constas ao realizar um pagamento', () => {
     const pagamento = new Pagamento({
       contaOrigem: conta1,
       contaDestino: conta2,
@@ -32,8 +32,25 @@ describe('Pagamento', () => {
     });
     expect(conta1.saldo).to.be.equal(100);
     expect(conta2.saldo).to.be.equal(100);
-    pagamento.pagamento();
+    pagamento.efetivar();
     expect(conta1.saldo).to.be.equal(50);
     expect(conta2.saldo).to.be.equal(150);
   });
+
+  it(
+    `Deve ser cobrado acrescetar juros de 20% se o pagamento 
+  for realizado após a data de vencimento`, 
+    () => {
+      const pagamento = new Pagamento({
+        contaOrigem: conta1,
+        contaDestino: conta2,
+        valor: 10,
+        dataVencimento: new Date('2023-11-1'),
+        dataPagamento: new Date('2023-11-2'),
+      });
+      pagamento.efetivar();
+      expect(conta1.saldo).to.be.equal(88);
+      expect(conta2.saldo).to.be.equal(112);
+    },
+  );
 });

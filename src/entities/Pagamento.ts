@@ -31,7 +31,10 @@ class Pagamento {
     return this._contaDestino;
   }
 
-  public pagamento(): void {
+  public efetivar(): void {
+    if (this._dataPagamento.getTime() > this._dataVencimento.getTime()) {
+      this._valor *= 1.2;
+    }
     this._contaOrigem.debitar(this._valor);
     this._contaDestino.creditar(this._valor);
   }
