@@ -1,7 +1,8 @@
 import { expect } from 'chai';
 import Conta from '../../src/entities/Conta';
+import Email from '../../src/entities/Email';
 
-const email = 'teste@teste.com';
+const email = new Email('teste@teste.com');
 
 describe('Conta', () => {
   it('Deve ser possivel criar uma instancia (objeto) de Conta', () => {

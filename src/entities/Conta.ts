@@ -1,15 +1,28 @@
+import Email from './Email';
+
 class Conta {
   private _saldo: number;
+  private _email: Email;
 
-  private _email: string;
-
-  constructor(saldo: number, email: string) {
+  constructor(saldo: number, email: Email) {
     this._saldo = saldo;
     this._email = email;
   }
 
-  get saldo(): number {
+  public get saldo(): number {
     return this._saldo;
+  }
+
+  private set saldo(value: number) {
+    this._saldo = value;
+  }
+
+  public get email(): Email {
+    return this._email;
+  }
+
+  public set email(value: Email) {
+    this._email = value;
   }
 
   public debitar(valor: number): void {

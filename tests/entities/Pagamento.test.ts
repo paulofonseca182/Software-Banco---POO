@@ -1,14 +1,15 @@
 import { expect } from 'chai';
 import Pagamento from '../../src/entities/Pagamento';
 import Conta from '../../src/entities/Conta';
+import Email from '../../src/entities/Email';
 
 describe('Pagamento', () => {
   let conta1: Conta;
   let conta2: Conta;
 
   beforeEach(() => {
-    conta1 = new Conta(100, 'teste@teste.com');
-    conta2 = new Conta(100, 'teste1@teste.com');
+    conta1 = new Conta(100, new Email('teste@teste.com'));
+    conta2 = new Conta(100, new Email('teste1@teste.com'));
   });
 
   it('Deve ser possivel criar uma instancia (objeto) de Pagamento', () => {
