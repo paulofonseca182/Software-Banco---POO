@@ -1,4 +1,5 @@
 import Conta from './Conta';
+import ITransacao from './ITransacao';
 
 type PagamentoProps = {
   contaDestino: Conta,
@@ -8,7 +9,7 @@ type PagamentoProps = {
   dataPagamento: Date,
 };
 
-class Pagamento {
+class Pagamento implements ITransacao {
   private _contaOrigem: Conta;
   private _contaDestino: Conta;
   private _valor: number;

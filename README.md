@@ -1,6 +1,6 @@
 # Software-Banco---POO
 
- - Criando um novo software para um banco.
+ - Criando um novo software para um banco utiliazando Programacao Orientada a Objeto.
 
 ## Etapa 1
 
