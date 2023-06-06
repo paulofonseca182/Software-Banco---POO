@@ -18,6 +18,10 @@ class Conta {
     }
     this._saldo -= valor;
   }
+
+  public creditar(valor: number): void {
+    this._saldo += valor;
+  }
 }
 
 export default Conta;

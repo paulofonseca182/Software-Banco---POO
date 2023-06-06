@@ -19,4 +19,10 @@ describe('Conta', () => {
     const conta = new Conta(100, email);
     expect(() => conta.debitar(150)).to.throws('Saldo insuficiente');
   });
+
+  it('Deve ser possivel creditar um valor em uma conta', () => {
+    const conta = new Conta(100, email);
+    conta.creditar(50);
+    expect(conta.saldo).to.be.equal(150);
+  });
 });
