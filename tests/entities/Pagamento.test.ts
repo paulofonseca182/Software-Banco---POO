@@ -21,4 +21,19 @@ describe('Pagamento', () => {
     });
     expect(pagamento).to.be.instanceOf(Pagamento);
   });
+
+  it('Deve alterar o salfo das constas ao realizar um pagamento', () => {
+    const pagamento = new Pagamento({
+      contaOrigem: conta1,
+      contaDestino: conta2,
+      valor: 50,
+      dataVencimento: new Date(),
+      dataPagamento: new Date(),
+    });
+    expect(conta1.saldo).to.be.equal(100);
+    expect(conta2.saldo).to.be.equal(100);
+    pagamento.pagamento();
+    expect(conta1.saldo).to.be.equal(50);
+    expect(conta2.saldo).to.be.equal(150);
+  });
 });

@@ -22,5 +22,18 @@ class Pagamento {
     this._dataVencimento = params.dataVencimento;
     this._dataPagamento = params.dataPagamento;
   }
+
+  public get contaOrigem(): Conta {
+    return this._contaOrigem;
+  }
+
+  public get contaDestino(): Conta {
+    return this._contaDestino;
+  }
+
+  public pagamento(): void {
+    this._contaOrigem.debitar(this._valor);
+    this._contaDestino.creditar(this._valor);
+  }
 }
 export default Pagamento;
