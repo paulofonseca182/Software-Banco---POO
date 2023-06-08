@@ -9,7 +9,10 @@ class ContaCorrente extends Conta {
   }
  
   debitar(valor: number): void {
-    console.log(valor);
+    if (valor > (this._saldo + this._chequeEspecial)) {
+      throw new Error('Saldo insuficiente');
+    }
+    this._saldo -= valor;
   }
 }
 

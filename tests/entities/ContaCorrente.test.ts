@@ -9,14 +9,14 @@ describe('ContaCorrente', () => {
     const conta = new ContaCorrente(100, email, 100);
     expect(conta).to.be.instanceOf(ContaCorrente);
   });
-/* 
-  it('Deve ser possivel debitar na conta', () => {
-    const conta = new Conta(100, email);
+
+  it('Deve ser possivel debitar na contaCorrente', () => {
+    const conta = new ContaCorrente(100, email, 100);
     conta.debitar(50);
     expect(conta.saldo).to.be.equal(50);
   });
 
-  it('Deve causar um erro ao tentar debitar um valor maior que o saldo', () => {
+  /*  it('Deve causar um erro ao tentar debitar um valor maior que o saldo', () => {
     const conta = new Conta(100, email);
     expect(() => conta.debitar(150)).to.throws('Saldo insuficiente');
   });
