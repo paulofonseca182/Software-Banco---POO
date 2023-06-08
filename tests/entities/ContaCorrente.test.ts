@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import ContaCorrente from '../../src/entities/Conta/ContaCorrente';
+import ContaCorrente from '../../src/entities/Contas/ContaCorrente';
 import Email from '../../src/entities/Email';
 
 const email = new Email('teste@teste.com');

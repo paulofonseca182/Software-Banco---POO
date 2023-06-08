@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import Email from '../../src/entities/Email';
 import Transferencia from '../../src/entities/Transferencia';
-import ContaPoupanca from '../../src/entities/Conta/ContaPoupanca';
+import ContaPoupanca from '../../src/entities/Contas/ContaPoupanca';
 
 describe('Transferencia', () => {
   it('Deve ser possivel criar uma instancia (objeto) de Transferencia', () => {

@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import Email from '../../src/entities/Email';
 import Transferencia from '../../src/entities/Transferencia';
 import processarFila from '../../src/services/processarFilas';
-import ContaPoupanca from '../../src/entities/Conta/ContaPoupanca';
+import ContaPoupanca from '../../src/entities/Contas/ContaPoupanca';
 
 describe('ProcessarFila', () => {
   it('Deve ser possivel processar uma fila de transferencias', () => {
