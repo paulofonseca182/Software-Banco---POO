@@ -16,14 +16,15 @@ describe('ContaCorrente', () => {
     expect(conta.saldo).to.be.equal(50);
   });
 
-  /*  it('Deve causar um erro ao tentar debitar um valor maior que o saldo', () => {
-    const conta = new Conta(100, email);
-    expect(() => conta.debitar(150)).to.throws('Saldo insuficiente');
+  it(`Deve causar um erro ao tentar 
+  debitar um valor maior que o saldo mais chque especial`, () => {
+    const conta = new ContaCorrente(100, email, 100);
+    expect(() => conta.debitar(250)).to.throws('Saldo insuficiente');
   });
 
-  it('Deve ser possivel creditar um valor em uma conta', () => {
-    const conta = new Conta(100, email);
+  it('Deve ser possivel creditar um valor em uma contaCorrente', () => {
+    const conta = new ContaCorrente(100, email, 100);
     conta.creditar(50);
     expect(conta.saldo).to.be.equal(150);
-  }); */
+  });
 });
