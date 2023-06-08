@@ -6,7 +6,7 @@ const email = new Email('teste@teste.com');
 
 describe('ContaCorrente', () => {
   it('Deve ser possivel criar uma instancia (objeto) de ContaCorrente', () => {
-    const conta = new ContaCorrente(100, email);
+    const conta = new ContaCorrente(100, email, 100);
     expect(conta).to.be.instanceOf(ContaCorrente);
   });
 /* 
