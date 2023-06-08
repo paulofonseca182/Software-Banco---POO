@@ -1,12 +1,4 @@
-import Pagamento from './Pagamento';
-import Conta from '../Contas/Conta';
-
-type PagamentoProps = {
-  contaDestino: Conta,
-  valor: number,
-  contaOrigem: Conta,
-  dataPagamento: Date,
-};
+import Pagamento, { PagamentoProps } from './Pagamento';
 
 class PagamentoBoleto extends Pagamento {
   private _dataVencimento: Date;

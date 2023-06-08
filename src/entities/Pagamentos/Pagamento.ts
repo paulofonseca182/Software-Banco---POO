@@ -1,7 +1,7 @@
 import Conta from '../Contas/Conta';
 import ITransacao from '../ITransacao';
 
-type PagamentoProps = {
+export type PagamentoProps = {
   contaDestino: Conta,
   valor: number,
   contaOrigem: Conta,
