@@ -1,5 +1,5 @@
 import Conta from './Conta';
-import Email from './Email';
+import Email from '../Email';
 
 class ContaPoupanca extends Conta {
   private _juros: number;
@@ -8,8 +8,15 @@ class ContaPoupanca extends Conta {
     this._juros = juros;
   }
 
-  rendimentoAnual(): number {
+  public rendimentoAnual(): number {
     return this.saldo * this._juros;
+  }
+
+  public debitar(valor: number): void {
+    if (valor > this._saldo) {
+      throw new Error('Saldo insuficiente');
+    }
+    this._saldo -= valor;
   }
 }
 export default ContaPoupanca;

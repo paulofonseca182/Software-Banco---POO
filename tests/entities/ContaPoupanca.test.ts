@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import ContaPoupanca from '../../src/entities/ContaPoupanca';
+import ContaPoupanca from '../../src/entities/Conta/ContaPoupanca';
 import Email from '../../src/entities/Email';
 
 describe('ContaPoupanca', () => {

@@ -1,4 +1,4 @@
-import Conta from './Conta';
+import Conta from './Conta/Conta';
 import ITransacao from './ITransacao';
 
 type TransferenciaProps = {
