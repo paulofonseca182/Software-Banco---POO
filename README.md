@@ -1,6 +1,6 @@
 # Software-Banco---POO
 
- - Criando um novo software para um banco utiliazando Programacao Orientada a Objeto com TypeScript.
+ - Criando um novo software para um banco utiliazando Programacao Orientada a Objeto com TypeScript e testes.
 
 ## Etapa 1
 
