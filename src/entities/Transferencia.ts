@@ -1,4 +1,5 @@
-import Conta from './Conta';
+import Conta from './Contas/Conta';
+import ITransacao from './ITransacao';
 
 type TransferenciaProps = {
   origem: Conta,
@@ -6,7 +7,7 @@ type TransferenciaProps = {
   valor: number,
 };
 
-class Trasnferencia {
+class Trasnferencia implements ITransacao {
   private _origem: Conta;
   private _destino: Conta;
   private _valor: number;

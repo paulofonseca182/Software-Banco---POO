@@ -1,7 +1,7 @@
-import Email from './Email';
+import Email from '../Email';
 
-class Conta {
-  private _saldo: number;
+abstract class Conta {
+  protected _saldo: number;
   private _email: Email;
 
   constructor(saldo: number, email: Email) {
@@ -25,12 +25,7 @@ class Conta {
     this._email = value;
   }
 
-  public debitar(valor: number): void {
-    if (valor > this._saldo) {
-      throw new Error('Saldo insuficiente');
-    }
-    this._saldo -= valor;
-  }
+  abstract debitar(valor: number): void;
 
   public creditar(valor: number): void {
     this._saldo += valor;
