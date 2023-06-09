@@ -11,11 +11,11 @@
 
 ## Especificações 
 
-  Conta: 
+  -Conta: 
     - saldo
     - email
 
-  Pagamento:
+  -Pagamento:
     - origem
     - destino
     - valor
