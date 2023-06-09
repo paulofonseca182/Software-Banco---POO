@@ -46,14 +46,6 @@
       - Ao efetivar valida antifraude com a bandeira
     - Pagamento no Boleto
       - Apenas o pagamento via boleto tem vencimento e aplica multa no caso de atraso.
-  - Ao ser efetivado, o pagamento gera um código de transação no formato `TT-UU`
-    - T: timestamp do momento da efetivação
-    - U: uuid 
-  - O código de transação do pagamento via boleto tem um formato específico: `TT-UU-VV`
-    - T: timestamp do momento da efetivação
-    - U: uuid
-    - V: timestamp do vencimento
-  
 
 ### Especificações 
 
