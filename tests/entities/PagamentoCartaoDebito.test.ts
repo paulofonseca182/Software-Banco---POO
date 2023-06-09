@@ -1,17 +1,20 @@
 import { expect } from 'chai';
 import ContaPoupanca from '../../src/entities/Contas/ContaPoupanca';
 import Email from '../../src/entities/Email';
-import PagamentoPix from '../../src/entities/Pagamentos/PagamentoPix';
+import PagamentoCartaoDebito from
+  '../../src/entities/Pagamentos/PagamentoCartaoDebito';
 
-describe('PagamentoPix', () => {
+describe('PagamentoCartaoDebito', () => {
   let conta1: ContaPoupanca;
   let conta2: ContaPoupanca;
   beforeEach(() => {
     conta1 = new ContaPoupanca(100, new Email('teste@teste.com'), 0.1);
     conta2 = new ContaPoupanca(100, new Email('teste1@teste.com'), 0.1);
   });
-  it('Deve ser possivel criar uma instancia (objeto) de PagamentoPix', () => {
-    const pagamento = new PagamentoPix(
+
+  it(`Deve ser possivel criar uma instancia 
+  (objeto) de PagamentoCartaoDebito`, () => {
+    const pagamento = new PagamentoCartaoDebito(
       {
         contaOrigem: conta1,
         contaDestino: conta2,
@@ -19,11 +22,11 @@ describe('PagamentoPix', () => {
         dataPagamento: new Date(),
       },
     );
-    expect(pagamento).to.be.instanceOf(PagamentoPix);
+    expect(pagamento).to.be.instanceOf(PagamentoCartaoDebito);
   });
 
-  it('Deve ser possivel efetivar o pagamentoPix', () => {
-    const pagamento = new PagamentoPix(
+  it('Deve ser possivel efetivar o PagamentoCartaoDebito', () => {
+    const pagamento = new PagamentoCartaoDebito(
       {
         contaOrigem: conta1,
         contaDestino: conta2,
